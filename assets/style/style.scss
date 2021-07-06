@@ -1,0 +1,142 @@
+@import "./require/font", "./require/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Chivo";
+  font-size: 16px;
+}
+
+body {
+  background: $primary-dark;
+  color: $light-text-color;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: lighten($link-color, 15%);
+  transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  &:hover {
+    color: $link-color;
+  }
+}
+
+.logo-link {
+  font-family: $logo-font-family;
+  color: $white-text-color;
+  text-transform: uppercase;
+  span {
+    color: $link-color;
+  }
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  [class^="col"] {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Medium Screen Devicess */
+@media screen and (min-width: 768px) {
+  .row {
+    .col-md-4 {
+      flex: 0 0 25%;
+      width: 25%;
+    }
+    .col-md-6 {
+      flex: 0 0 50%;
+      width: 50%;
+    }
+  }
+}
+/* Header */
+header {
+  background: $primary-dark-background;
+  padding: 1.4rem 0;
+  /* Navigation */
+  .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo-link {
+      font-size: 2.25rem;
+      span {
+        position: relative;
+        top: -0.2rem;
+      }
+    }
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .nav-link {
+        a {
+          font-size: 1.25rem;
+          padding: 0.5rem 1.8rem;
+          color: $light-text-color;
+          border-radius: 100px;
+          -webkit-border-radius: 100px;
+          -moz-border-radius: 100px;
+          -ms-border-radius: 100px;
+          -o-border-radius: 100px;
+          position: relative;
+          overflow: hidden;
+          z-index: 0;
+          &:before {
+            content: "";
+            position: absolute;
+            transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            height: 100%;
+            width: 100%;
+            border-radius: 100px;
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            -ms-border-radius: 100px;
+            -o-border-radius: 100px;
+            background: $primary-blue-background;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            opacity: 0;
+          }
+          &:hover:before {
+            opacity: 1;
+          }
+        }
+        &.active {
+          a:before {
+            opacity: 1;
+          }
+        }
+        &:not(:first-child) {
+          margin-left: 11px;
+        }
+      }
+    }
+  }
+}

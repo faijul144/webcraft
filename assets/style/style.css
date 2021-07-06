@@ -1,0 +1,182 @@
+@font-face {
+  font-family: "ContrailOne";
+  src: url("./../fonts/ContrailOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Chivo";
+  src: url("./../fonts/Chivo-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Chivo";
+  src: url("./../fonts/Chivo-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Chivo";
+  src: url("./../fonts/Chivo-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Chivo";
+  src: url("./../fonts/Chivo-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Chivo";
+  font-size: 16px;
+}
+
+body {
+  background: #292929;
+  color: #fafafa;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #71c3f2;
+  transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2ba6eb;
+}
+
+.logo-link {
+  font-family: "ContrailOne";
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.logo-link span {
+  color: #2ba6eb;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.row [class^="col"] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Medium Screen Devicess */
+@media screen and (min-width: 768px) {
+  .row .col-md-4 {
+    flex: 0 0 25%;
+    width: 25%;
+  }
+  .row .col-md-6 {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+}
+
+/* Header */
+header {
+  background: linear-gradient(90.22deg, #3e3f40 0%, #434343 42.8%, #414141 99.41%);
+  padding: 1.4rem 0;
+  /* Navigation */
+}
+
+header .main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .main-nav .logo-link {
+  font-size: 2.25rem;
+}
+
+header .main-nav .logo-link span {
+  position: relative;
+  top: -0.2rem;
+}
+
+header .main-nav .nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header .main-nav .nav-menu .nav-link a {
+  font-size: 1.25rem;
+  padding: 0.5rem 1.8rem;
+  color: #fafafa;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+header .main-nav .nav-menu .nav-link a:before {
+  content: "";
+  position: absolute;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  background: radial-gradient(156.52% 67.65% at 49.72% 32.35%, #5abff8 0%, #328fe6 100%);
+  z-index: -1;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+header .main-nav .nav-menu .nav-link a:hover:before {
+  opacity: 1;
+}
+
+header .main-nav .nav-menu .nav-link.active a:before {
+  opacity: 1;
+}
+
+header .main-nav .nav-menu .nav-link:not(:first-child) {
+  margin-left: 11px;
+}

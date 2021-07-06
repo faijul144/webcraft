@@ -1,0 +1,39 @@
+// Font Family Variable
+$regular-font-family: "Chivo";
+$logo-font-family: "ContrailOne";
+
+// Theme Variable
+// Light Collors
+$light-text-color: #fafafa;
+$white-text-color: #ffffff;
+// Dark Colors
+$primary-dark-background: linear-gradient(
+  90.22deg,
+  #3e3f40 0%,
+  #434343 42.8%,
+  #414141 99.41%
+);
+
+$secondary-dark-background: linear-gradient(
+  128.55deg,
+  #141414 0.31%,
+  rgba(35, 35, 35, 0.82) 51.19%,
+  #060606 100%
+);
+$primary-dark: #292929;
+// Vlue Colors
+$primary-blue-background: radial-gradient(
+  156.52% 67.65% at 49.72% 32.35%,
+  #5abff8 0%,
+  #328fe6 100%
+);
+
+$secondary-blue-background: radial-gradient(
+  100.69% 815.51% at 100% 2.37%,
+  #0e9bea 0%,
+  #5cbdf3 41.57%,
+  #27a3e9 100%
+);
+
+// Link Color
+$link-color: #2ba6eb;
