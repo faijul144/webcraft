@@ -9,7 +9,7 @@
     <title>Webcraft</title>
 </head>
 
-<body>
+<body id="home">
     <!-- Header Nav Start -->
     <header>
         <!-- Container Start -->
@@ -29,17 +29,17 @@
     <!-- Header Nav End -->
     <!-- Main Content Start -->
     <main>
-        <!-- Container Start -->
-        <div class="container">
-            <!-- Hero Section Start -->
-            <section id="home" class="hero-section">
+
+        <!-- Hero Section Start -->
+        <section class="hero-section">
+            <div class="container">
                 <div class="row">
                     <!-- Hero Card Start -->
                     <div class="col-md-6">
                         <div class="hero-card">
                             <h1 class="hero-card__title">UI/UX, Infography, Web Design, SEO</h1>
-                            <p class="hero-card-sub__title">You Name It And We’ll Do it</p>
-                            <a href="#contant" class="hero-class__button">Contact Us Now</a>
+                            <p class="hero-card__sub-title">You Name It And We’ll Do it</p>
+                            <a href="#contact" class="hero-card__button">Contact Us Now</a>
                         </div>
                     </div>
                     <!-- Hero Card End -->
@@ -49,99 +49,110 @@
                     </div>
                     <!-- Hero Right Image End -->
                 </div>
-            </section>
-            <!-- Hero Section End -->
-            <!-- Service Section Start -->
-            <section id="service">
-                <!-- Section Title Start -->
-                <div class="section-title">
-                    <h2 class="section-title__text">Services</h2>
-                    <div class="section-title__sub-text">Quality services that we provide</div>
-                </div>
-                <!-- Section Title End -->
-                <!-- Section Content Start -->
-                <div class="section-content">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <!-- Card Start -->
-                            <div class="card">
-                                <div class="card__header">
-                                    <div class="card__icon"><img src="./assets/images/icon/icon-1.svg" alt="Icon 1">
-                                    </div>
+            </div>
+        </section>
+        <!-- Hero Section End -->
+        <!-- Service Section Start -->
+        <section id="service" class="service-section">
+            <!-- Section Title Start -->
+            <div class="section-title">
+                <h2 class="section-title__text">Services</h2>
+                <div class="section-title__sub-text">Quality services that we provide</div>
+            </div>
+            <!-- Section Title End -->
+            <!-- Section Content Start -->
+            <div class="container">
+                <div class="row content-center">
+                    <div class="col-md-3 gutter-10">
+                        <!-- Card Start -->
+                        <div class="card">
+                            <div class="card__header">
+                                <div class="card__header__icon"><img src="./assets/images/icon/icon-1.svg" alt="Icon 1">
                                 </div>
-                                <h3 class="card__title">UI/UX DESIGN</h3>
-                                <p class="card__text">Our UI/UX designs are of high quality and unique which will are
+                            </div>
+                            <div class="card__content">
+                                <h3 class="card__content__title">UI/UX DESIGN</h3>
+                                <p class="card__content__text">Our UI/UX designs are of high quality and unique which
+                                    will are
                                     kept
                                     simple and will surely match your taste</p>
                             </div>
-                            <!-- Card End -->
                         </div>
-                        <div class="col-md-4">
-                            <!-- Card Start -->
-                            <div class="card">
-                                <div class="card__header">
-                                    <div class="card__icon"><img src="./assets/images/icon/icon-2.svg" alt="Icon 2">
-                                    </div>
+                        <!-- Card End -->
+                    </div>
+                    <div class="col-md-3 gutter-10">
+                        <!-- Card Start -->
+                        <div class="card">
+                            <div class="card__header">
+                                <div class="card__header__icon"><img src="./assets/images/icon/icon-2.svg" alt="Icon 2">
                                 </div>
-                                <h3 class="card__title">Web Design</h3>
-                                <p class="card__text">The sites we design are all responsive and seo friendly and are
+                            </div>
+                            <div class="card__content">
+                                <h3 class="card__content__title">Web Design</h3>
+                                <p class="card__content__text">The sites we design are all responsive and seo friendly
+                                    and are
                                     built
                                     while keeping the clients taste in mind</p>
                             </div>
-                            <!-- Card End -->
                         </div>
-                        <div class="col-md-4">
-                            <!-- Card Start -->
-                            <div class="card">
-                                <div class="card__header">
-                                    <div class="card__icon"><img src="./assets/images/icon/icon-3.svg" alt="Icon 3">
-                                    </div>
+                        <!-- Card End -->
+                    </div>
+                    <div class="col-md-3 gutter-10">
+                        <!-- Card Start -->
+                        <div class="card">
+                            <div class="card__header">
+                                <div class="card__header__icon"><img src="./assets/images/icon/icon-3.svg" alt="Icon 3">
                                 </div>
-                                <h3 class="card__title">SEO</h3>
-                                <p class="card__text">We provide all types of high quality seo service that’ll surely
+                            </div>
+                            <div class="card__content">
+                                <h3 class="card__content__title">SEO</h3>
+                                <p class="card__content__text">We provide all types of high quality seo service that’ll
+                                    surely
                                     get
                                     your site a ranking in the search engines</p>
                             </div>
-                            <!-- Card End -->
                         </div>
+                        <!-- Card End -->
                     </div>
                 </div>
-                <!-- Section Content End -->
-            </section>
-            <!-- Service Section End -->
-            <!-- Portfolio Section Start -->
-            <section id="portfolio">
-                <!-- Section Title Start -->
-                <div class="section-title">
-                    <h2 class="section-title__text">Portfolio</h2>
-                    <div class="section-title__sub-text">Here are some of our work</div>
+            </div>
+        </section>
+        <!-- Service Section End -->
+        <!-- Portfolio Section Start -->
+        <section id="portfolio">
+            <!-- Section Title Start -->
+            <div class="section-title">
+                <h2 class="section-title__text">Portfolio</h2>
+                <div class="section-title__sub-text">Here are some of our work</div>
+            </div>
+            <!-- Section Title End -->
+            <!-- Section Content Start -->
+            <div class="container">
+                <!-- Imge Grid Start -->
+                <div class="grid">
+                    <div class="grid__item pos_1" data-img="https://source.unsplash.com/1600x900/?nature"></div>
+                    <div class="grid__item pos_2" data-img="https://source.unsplash.com/1600x900/?film"></div>
+                    <div class="grid__item pos_3" data-img="https://source.unsplash.com/1600x900/?cars"></div>
+                    <div class="grid__item pos_4" data-img="https://source.unsplash.com/1600x900/?computer"></div>
+                    <div class="grid__item pos_5" data-img="https://source.unsplash.com/1600x900/?abstract"></div>
+                    <div class="grid__item pos_6" data-img="https://source.unsplash.com/1600x900/?technology"></div>
+                    <div class="grid__item pos_7" data-img="https://source.unsplash.com/1600x900/?city"></div>
+                    <div class="grid__item pos_8" data-img="https://source.unsplash.com/1600x900/?farm"></div>
+                    <div class="grid__item pos_9" data-img="https://source.unsplash.com/1600x900/?sports"></div>
                 </div>
-                <!-- Section Title End -->
-                <!-- Section Content Start -->
-                <div class="section-content">
-                    <!-- Imge Grid Start -->
-                    <div class="grid__container">
-                        <div class="grid__item" data-img="./assets/images/grid-images/1.jpg"></div>
-                        <div class="grid__item" data-img="./assets/images/grid-images/2.jpg"></div>
-                        <div class="grid__item" data-img="./assets/images/grid-images/3.jpg"></div>
-                        <div class="grid__item" data-img="./assets/images/grid-images/4.jpg"></div>
-                        <div class="grid__item" data-img="./assets/images/grid-images/5.jpg"></div>
-                        <div class="grid__item" data-img="./assets/images/grid-images/6.jpg"></div>
-                        <div class="grid__item" data-img="./assets/images/grid-images/7.jpg"></div>
-                        <div class="grid__item" data-img="./assets/images/grid-images/8.jpg"></div>
-                    </div>
-                    <!-- Imge Grid End -->
-                </div>
-                <!-- Section Content End -->
-            </section>
-            <!-- Portfolio Section End -->
-            <!-- Contact Section Start -->
-            <section id="contact">
+                <!-- Imge Grid End -->
+            </div>
+            <!-- Section Content End -->
+        </section>
+        <!-- Portfolio Section End -->
+        <!-- Contact Section Start -->
+        <section id="contact">
+            <div class="container">
                 <div class="row">
                     <!-- Left Side Start -->
                     <div class="col-md-6">
                         <!-- Section Title Start -->
-                        <div class="section-title">
+                        <div class="section-title text-left mb-1">
                             <h2 class="section-title__text">Contact us</h2>
                         </div>
                         <!-- Section Title End -->
@@ -152,8 +163,10 @@
                                 <input type="text" placeholder="Name" class="form__input" required>
                                 <input type="email" placeholder="Email" class="form__input" required>
                                 <input type="text" placeholder="Subject" class="form__input" required>
-                                <textarea placeholder="Message" id="" crows="10"></textarea>
-                                <button type="submit" class="primaryBtn">Submit</button>
+                                <textarea placeholder="Message" class="form__textarea" rows="5"></textarea>
+                                <div class="text-right">
+                                    <button type="submit" class="form__primaryBtn">SEND</button>
+                                </div>
                             </form>
                             <!-- Contact Form End -->
                         </div>
@@ -168,8 +181,9 @@
                     </div>
                     <!-- Right Side End -->
                 </div>
-            </section>
-            <!-- Contact Section End -->
+            </div>
+        </section>
+        <!-- Contact Section End -->
         </div>
         <!-- Container End -->
     </main>
@@ -180,7 +194,7 @@
     </footer>
     <!-- Footer End -->
 
-
+    <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 
