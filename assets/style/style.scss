@@ -8,13 +8,13 @@
 
 html {
   font-family: "Chivo";
-  font-size: 16px;
-  // scroll-behavior: smooth;
+  font-size: $root-font-size;
 }
 
 body {
   background: $primary-dark;
   color: $light-text-color;
+  overflow-x: hidden;
 }
 
 h1,
@@ -57,8 +57,9 @@ img {
 }
 
 .container {
-  width: 900px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .row {
@@ -71,6 +72,8 @@ img {
   [class^="col"] {
     padding-left: 15px;
     padding-right: 15px;
+    width: 100%;
+    flex: 100%;
     &.gutter-10 {
       padding-left: 10px;
       padding-right: 10px;
@@ -82,6 +85,73 @@ img {
 header {
   background: $primary-dark-background;
   padding: 1.4rem 0;
+  /* Hambergar Icon */
+  .hamberger {
+    position: relative;
+    height: 2.4rem;
+    width: 2.4rem;
+    border-radius: 50%;
+    background: $secondary-blue-background;
+    > div {
+      position: absolute;
+      height: 3px;
+      width: 20px;
+      background: $light-text-color;
+      display: block;
+      left: 0.625rem;
+      transform: rotate(0) scale(1);
+      -webkit-transform: rotate(0) scale(1);
+      -moz-transform: rotate(0) scale(1);
+      -ms-transform: rotate(0) scale(1);
+      -o-transform: rotate(0) scale(1);
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      @for$bar from 1 through 3 {
+        &:nth-child(#{$bar}) {
+          transform-origin: center;
+          @if ($bar == 1) {
+            top: 0.8rem;
+          } @else if ($bar == 2) {
+            top: 1.15rem;
+          } @else {
+            top: 1.55rem;
+          }
+        }
+      }
+    }
+    &.open {
+      > div {
+        @for $bar from 1 through 3 {
+          &:nth-child(#{$bar}) {
+            top: 1.15rem;
+            transform-origin: center;
+            @if ($bar == 1) {
+              transform: rotate(-45deg) scale(1);
+              -webkit-transform: rotate(-45deg) scale(1);
+              -moz-transform: rotate(-45deg) scale(1);
+              -ms-transform: rotate(-45deg) scale(1);
+              -o-transform: rotate(-45deg) scale(1);
+            } @else if ($bar == 2) {
+              transform: rotate(0deg) scale(0);
+              -webkit-transform: rotate(0deg) scale(0);
+              -moz-transform: rotate(0deg) scale(0);
+              -ms-transform: rotate(0deg) scale(0);
+              -o-transform: rotate(0deg) scale(0);
+            } @else {
+              transform: rotate(45deg) scale(1);
+              -webkit-transform: rotate(45deg) scale(1);
+              -moz-transform: rotate(45deg) scale(1);
+              -ms-transform: rotate(45deg) scale(1);
+              -o-transform: rotate(45deg) scale(1);
+            }
+          }
+        }
+      }
+    }
+  }
   /* Navigation */
   .main-nav {
     display: flex;

@@ -1,5 +1,66 @@
+/* Big MObile Screen */
+@media screen and (min-width: 575px) {
+  .d-xs-none {
+    display: none !important;
+  }
+  .d-xs-block {
+    display: block !important;
+  }
+  .d-xs-flex {
+    display: flex !important;
+  }
+  .container {
+    max-width: 33.75rem;
+  }
+}
+
+/* Tablet Screen */
+@media screen and (min-width: 768px) {
+  .d-sm-none {
+    display: none !important;
+  }
+  .d-sm-block {
+    display: block !important;
+  }
+  .d-sm-flex {
+    display: flex !important;
+  }
+  .container {
+    max-width: 45rem;
+  }
+}
+
 /* Medium Screen Devicess */
 @media screen and (min-width: 992px) {
+  .d-md-none {
+    display: none !important;
+  }
+
+  .d-md-block {
+    display: block !important;
+  }
+
+  .d-md-flex {
+    display: flex !important;
+  }
+
+  .flex-md-column-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .mb-md-1 {
+    margin-bottom: 1rem !important;
+  }
+  .mb-md-2 {
+    margin-bottom: 2rem !important;
+  }
+  .mb-md-3 {
+    margin-bottom: 3rem !important;
+  }
+
+  .container {
+    max-width: 60rem;
+  }
   .row {
     .col-md-3 {
       flex: 0 0 33.33%;
@@ -13,5 +74,127 @@
       flex: 0 0 50%;
       width: 50%;
     }
+  }
+}
+
+// Md to Small
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .flex-ms-column-reverse {
+    flex-direction: column-reverse;
+  }
+  .row {
+    .col-ms-3 {
+      flex: 0 0 33.33%;
+      width: 33.33%;
+    }
+    .col-ms-4 {
+      flex: 0 0 25%;
+      width: 25%;
+    }
+    .col-ms-6 {
+      flex: 0 0 50%;
+      width: 50%;
+    }
+  }
+}
+
+/* Small Screen Max */
+@media screen and (max-width: 767px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "pos-1 pos-2"
+      "pos-3 pos-4"
+      "pos-5 pos-5"
+      "pos-6 pos-7"
+      "pos-8 pos-9";
+  }
+
+  .flex-sm-column-reverse {
+    flex-direction: column-reverse;
+  }
+  header {
+    .main-nav {
+      .nav-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background: $primary-dark-background;
+        height: 100%;
+        width: 50%;
+        overflow: scroll;
+        padding: 0 0 1rem;
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        .nav-link {
+          margin-left: 0 !important;
+          a {
+            display: block;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+            padding: 1rem 2.5rem;
+            &:before {
+              display: none;
+            }
+            &:hover,
+            &:focus {
+              background: rgba(0, 0, 0, 0.3);
+            }
+          }
+          &:not(:last-child) {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+          }
+          &.active {
+            a {
+              background: rgba(0, 0, 0, 0.3);
+            }
+          }
+        }
+        &.open {
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+// extra small screen
+@media screen and (max-width: 500px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "pos-1"
+      "pos-2"
+      "pos-3"
+      "pos-4"
+      "pos-5"
+      "pos-6"
+      "pos-7"
+      "pos-8"
+      "pos-9";
+  }
+}
+
+// mid screen
+@media screen and (max-width: 991px) {
+  .mb-sm-1 {
+    margin-bottom: 1rem !important;
+  }
+  .mb-sm-2 {
+    margin-bottom: 2rem !important;
+  }
+  .mb-sm-3 {
+    margin-bottom: 3rem !important;
+  }
+  .google-map {
+    height: 500px;
   }
 }

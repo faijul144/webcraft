@@ -43,6 +43,17 @@ $('a[href*="#"]')
     }
   });
 
+// Small Menu
+$(".hamberger").on("click", function (e) {
+  e.preventDefault();
+  !$(this).hasClass("open")
+    ? $(this).addClass("open")
+    : $(this).removeClass("open");
+  !$(this).parent().find(".nav-menu").hasClass("open")
+    ? $(".nav-menu").addClass("open")
+    : $(".nav-menu").removeClass("open");
+});
+
 // Set data-img as background style
 $("[data-img]").each(function () {
   let bgImageSrc = $(this).attr("data-img");
