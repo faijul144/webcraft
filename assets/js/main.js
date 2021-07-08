@@ -43,6 +43,15 @@ $('a[href*="#"]')
     }
   });
 
+// Sticky Menu
+const w = $(window);
+const header = $("header");
+w.bind("scroll", function () {
+  w.scrollTop() > 150
+    ? header.removeClass("header").addClass("sticky")
+    : header.removeClass("sticky").addClass("header");
+});
+
 // Small Menu
 $(".hamberger").on("click", function (e) {
   e.preventDefault();
@@ -58,4 +67,43 @@ $(".hamberger").on("click", function (e) {
 $("[data-img]").each(function () {
   let bgImageSrc = $(this).attr("data-img");
   $(this).css("background-image", `url(${bgImageSrc})`);
+});
+
+// Main Observer For Animation
+const options = {
+  treshold: 0,
+  rootMargin: "0px 0px -250px 0px",
+};
+const animationObserver = new IntersectionObserver(function (entries) {
+  $(entries).each(function () {
+    if (!this.isIntersecting) {
+      $(this.target).removeClass("appear");
+    } else {
+      $(this.target).addClass("appear");
+      if ($(this.target).hasClass("grid__item")) {
+        let gridLinks = $(this.target);
+        gridLinks.each(function () {
+          animationObserver.unobserve(this);
+        });
+      }
+    }
+  });
+}, options);
+
+// Init Observer For Animation
+
+const animations = [".slide", ".pop-up"];
+
+$(animations).each(function () {
+  $(this).each(function () {
+    let animationDelay = $(this).attr("delay");
+    animationDelay != "" || animationDelay != undefined
+      ? $(this).css("transition-delay", animationDelay + "s")
+      : "";
+    if ($("window").width() > 768) {
+      animationObserver.observe(this);
+    } else {
+      $(this).addClass("appear");
+    }
+  });
 });

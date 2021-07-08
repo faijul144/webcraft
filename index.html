@@ -11,7 +11,7 @@
 
 <body id="home">
     <!-- Header Nav Start -->
-    <header>
+    <header class="header">
         <!-- Container Start -->
         <div class="container">
             <nav class="main-nav">
@@ -40,7 +40,7 @@
             <div class="container">
                 <div class="row">
                     <!-- Hero Card Start -->
-                    <div class="col-md-6 mb-sm-3">
+                    <div class="col-md-6 mb-sm-3 slide left">
                         <div class="hero-card">
                             <h1 class="hero-card__title">UI/UX, Infography, Web Design, SEO</h1>
                             <p class="hero-card__sub-title">You Name It And We’ll Do it</p>
@@ -49,7 +49,7 @@
                     </div>
                     <!-- Hero Card End -->
                     <!-- Hero Right Image Start -->
-                    <div class="col-md-6">
+                    <div class="col-md-6 slide slide right">
                         <img src="./assets/images/slider right.png" alt="Hero Image Right">
                     </div>
                     <!-- Hero Right Image End -->
@@ -61,8 +61,8 @@
         <section id="service" class="service-section">
             <!-- Section Title Start -->
             <div class="section-title">
-                <h2 class="section-title__text">Services</h2>
-                <div class="section-title__sub-text">Quality services that we provide</div>
+                <h2 class="section-title__text slide left">Services</h2>
+                <div class="section-title__sub-text slide right">Quality services that we provide</div>
             </div>
             <!-- Section Title End -->
             <!-- Section Content Start -->
@@ -70,7 +70,7 @@
                 <div class="row content-center">
                     <div class="col-md-3 col-ms-6 gutter-10 mb-sm-1">
                         <!-- Card Start -->
-                        <div class="card">
+                        <div class="card pop-up" delay="0.1">
                             <div class="card__header">
                                 <div class="card__header__icon"><img src="./assets/images/icon/icon-1.svg" alt="Icon 1">
                                 </div>
@@ -87,7 +87,7 @@
                     </div>
                     <div class="col-md-3 col-ms-6 gutter-10 mb-sm-1">
                         <!-- Card Start -->
-                        <div class="card">
+                        <div class="card pop-up" delay="0.3">
                             <div class="card__header">
                                 <div class="card__header__icon"><img src="./assets/images/icon/icon-2.svg" alt="Icon 2">
                                 </div>
@@ -104,7 +104,7 @@
                     </div>
                     <div class="col-md-3 col-ms-6 gutter-10">
                         <!-- Card Start -->
-                        <div class="card">
+                        <div class="card pop-up" delay="0.5">
                             <div class="card__header">
                                 <div class="card__header__icon"><img src="./assets/images/icon/icon-3.svg" alt="Icon 3">
                                 </div>
@@ -127,23 +127,28 @@
         <section id="portfolio">
             <!-- Section Title Start -->
             <div class="section-title">
-                <h2 class="section-title__text">Portfolio</h2>
-                <div class="section-title__sub-text">Here are some of our work</div>
+                <h2 class="section-title__text slide left">Portfolio</h2>
+                <div class="section-title__sub-text slide right">Here are some of our work</div>
             </div>
             <!-- Section Title End -->
             <!-- Section Content Start -->
             <div class="container">
                 <!-- Imge Grid Start -->
                 <div class="grid">
-                    <div class="grid__item pos_1" data-img="https://source.unsplash.com/1600x900/?nature"></div>
-                    <div class="grid__item pos_2" data-img="https://source.unsplash.com/1600x900/?film"></div>
-                    <div class="grid__item pos_3" data-img="https://source.unsplash.com/1600x900/?cars"></div>
-                    <div class="grid__item pos_4" data-img="https://source.unsplash.com/1600x900/?computer"></div>
-                    <div class="grid__item pos_5" data-img="https://source.unsplash.com/1600x900/?abstract"></div>
-                    <div class="grid__item pos_6" data-img="https://source.unsplash.com/1600x900/?technology"></div>
-                    <div class="grid__item pos_7" data-img="https://source.unsplash.com/1600x900/?city"></div>
-                    <div class="grid__item pos_8" data-img="https://source.unsplash.com/1600x900/?farm"></div>
-                    <div class="grid__item pos_9" data-img="https://source.unsplash.com/1600x900/?sports"></div>
+                    <div class="grid__item pos_1 pop-up" delay="1.05" data-img="./assets/images/grid-images/1.jpg">
+                    </div>
+                    <div class="grid__item pos_2 pop-up" delay="1.1" data-img="./assets/images/grid-images/2.jpg"></div>
+                    <div class="grid__item pos_3 pop-up" delay="1.15" data-img="./assets/images/grid-images/3.jpg">
+                    </div>
+                    <div class="grid__item pos_4 pop-up" delay="1.2" data-img="./assets/images/grid-images/4.jpg"></div>
+                    <div class="grid__item pos_5 pop-up" delay="1.25" data-img="./assets/images/grid-images/5.jpg">
+                    </div>
+                    <div class="grid__item pos_6 pop-up" delay="1.3" data-img="./assets/images/grid-images/6.jpg"></div>
+                    <div class="grid__item pos_7 pop-up" delay="1.35" data-img="./assets/images/grid-images/7.jpg">
+                    </div>
+                    <div class="grid__item pos_8 pop-up" delay="1.4" data-img="./assets/images/grid-images/8.jpg"></div>
+                    <div class="grid__item pos_9 pop-up" delay="1.45" data-img="./assets/images/grid-images/9.jpg">
+                    </div>
                 </div>
                 <!-- Imge Grid End -->
             </div>
@@ -158,13 +163,13 @@
                     <div class="col-md-6 ">
                         <!-- Section Title Start -->
                         <div class="section-title text-left mb-1">
-                            <h2 class="section-title__text">Contact us</h2>
+                            <h2 class="section-title__text slide left">Contact us</h2>
                         </div>
                         <!-- Section Title End -->
                         <!-- Section Content Start -->
                         <div class="section-content">
                             <!-- Contact Form Start -->
-                            <form>
+                            <form class="slide left">
                                 <input type="text" placeholder="Name" class="form__input" required>
                                 <input type="email" placeholder="Email" class="form__input" required>
                                 <input type="text" placeholder="Subject" class="form__input" required>
@@ -182,7 +187,7 @@
                     <div class="col-md-6 p-0 mb-sm-2">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4966.794269627788!2d-0.12722523046512882!3d51.505929723479255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sbd!4v1625567078179!5m2!1sen!2sbd"
-                            class="google-map" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            class="google-map slide right" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                     <!-- Right Side End -->
                 </div>
