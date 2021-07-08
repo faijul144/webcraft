@@ -100,10 +100,6 @@ $(animations).each(function () {
     animationDelay != "" || animationDelay != undefined
       ? $(this).css("transition-delay", animationDelay + "s")
       : "";
-    if ($("window").width() > 768) {
-      animationObserver.observe(this);
-    } else {
-      $(this).addClass("appear");
-    }
+    animationObserver.observe(this);
   });
 });
